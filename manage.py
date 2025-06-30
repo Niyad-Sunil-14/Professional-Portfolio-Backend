@@ -4,7 +4,8 @@ import os
 import sys
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'contact_backend.settings')
+    settings_module = 'contact_backend.deployment_settings' if 'RENDER_EXTERNAL_HOSTNAME' in os.environ else 'contact_backend.settings'
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
