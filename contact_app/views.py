@@ -11,7 +11,7 @@ from django.conf import settings
 class ContactMessageViewSet(viewsets.ModelViewSet):
     queryset = ContactMessage.objects.all()
     serializer_class = ContactMessageSerializer
-    http_method_names = ['post']
+    http_method_names = ['get', 'post']  # Allow GET and POST
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
@@ -38,6 +38,9 @@ class ContactMessageViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_201_CREATED
             )
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def list(self, request, *args, **kwargs):
+        return Response({"detail": "Use POST to submit a contact message."})
 
 @api_view(['GET'])
 def get_csrf_token(request):
