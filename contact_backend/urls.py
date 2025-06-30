@@ -21,5 +21,5 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/contact/', include('contact_app.urls')),
-    path('', RedirectView.as_view(url='/api/contact/messages/', permanent=False), name='home'),
+    path('', RedirectView.as_view(url='/api/contact/messages/', permanent=True), name='home'),
 ]
