@@ -32,7 +32,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "https://professional-portfolio-frontend-kj8q.onrender.com",
 ]
 
 ROOT_URLCONF = 'contact_backend.urls'
@@ -102,7 +102,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #Allow credentials (cookies, CSRF tokens) if needed
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost:5173"]
+CSRF_TRUSTED_ORIGINS = ["https://professional-portfolio-frontend-kj8q.onrender.com"]
 
 # Allow specific headers and methods
 CORS_ALLOW_METHODS = ['GET', 'POST', 'OPTIONS']

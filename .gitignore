@@ -1,3 +1,4 @@
 .env
 contact_backend/__pycache__
 contact_app/migrations
+contact_app/__pycache__
