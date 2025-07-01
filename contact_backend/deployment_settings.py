@@ -21,7 +21,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://professional-portfolio-frontend-kj8q.onrender.com",
+    "https://professional-portfolio-frontend-f2o4.onrender.com",
 ]
 
 STORAGES = {
