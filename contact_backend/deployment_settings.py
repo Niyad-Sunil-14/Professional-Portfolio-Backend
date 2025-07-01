@@ -20,9 +20,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     "https://professional-portfolio-frontend-kj8q.onrender.com",
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "https://professional-portfolio-frontend-kj8q.onrender.com",
+]
 
 STORAGES = {
     'default': {
