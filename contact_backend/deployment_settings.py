@@ -21,8 +21,12 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://professional-portfolio-frontend-f2o4.onrender.com",
+    'https://professional-portfolio-frontend-f2o4.onrender.com',
+    'https://professional-portfolio-frontend-f2o4.onrender.com/',
 ]
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_METHODS = ['GET', 'POST', 'OPTIONS']
+CORS_ALLOW_HEADERS = ['content-type', 'x-csrftoken']
 
 STORAGES = {
     'default': {
