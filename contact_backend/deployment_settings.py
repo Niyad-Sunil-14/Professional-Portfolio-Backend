@@ -2,8 +2,17 @@ import os
 import dj_database_url
 from .settings import *
 
-ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
-CSRF_TRUSTED_ORIGINS = ['https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
+ALLOWED_HOSTS = [
+    'professional-portfolio-backend-jjpp.onrender.com',
+    'professional-portfolio-frontend-f2o4.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
+
+CSRF_TRUSTED_ORIGINS = ['https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME'),
+                        'https://professional-portfolio-backend-jjpp.onrender.com',
+                        'https://professional-portfolio-frontend-f2o4.onrender.com',
+                        ]
 
 DEBUG = False
 SECRET_KEY = os.environ.get('SECRET_KEY')
@@ -20,6 +29,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://professional-portfolio-frontend-f2o4.onrender.com",
+]
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = ['GET', 'POST', 'OPTIONS']
