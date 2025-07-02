@@ -8,4 +8,5 @@ router.register(r'messages', ContactMessageViewSet, basename='contact-message')
 urlpatterns = [
     path('', include(router.urls)),
     path('csrf/', get_csrf_token, name='get-csrf-token'),
+    path('csrf', get_csrf_token), 
 ]

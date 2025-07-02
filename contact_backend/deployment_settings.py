@@ -21,6 +21,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME'),
     'https://professional-portfolio-frontend-f2o4.onrender.com',
     'https://professional-portfolio-frontend-f2o4.onrender.com/',
 ]
