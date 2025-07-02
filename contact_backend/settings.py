@@ -32,7 +32,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://professional-portfolio-frontend-kj8q.onrender.com",
+    "http://localhost:3000",
 ]
 
 ROOT_URLCONF = 'contact_backend.urls'
@@ -104,7 +104,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 #Allow credentials (cookies, CSRF tokens) if needed
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_TRUSTED_ORIGINS = ["https://professional-portfolio-frontend-kj8q.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
 
 # Allow specific headers and methods
 CORS_ALLOW_METHODS = ['GET', 'POST', 'OPTIONS']
