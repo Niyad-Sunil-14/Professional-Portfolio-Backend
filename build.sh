@@ -7,7 +7,7 @@ python manage.py collectstatic --no-input
 python manage.py makemigrations
 python manage.py migrate
 
-python manage.py create_superuser
+python manage.py create_superuser.py
 
 # if [[$CREATE_SUPERUSER]];
 # then
